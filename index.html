@@ -7,23 +7,25 @@
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles for the hacker theme */
+        /* Custom styles for the BTC Gold theme */
         .hacker-bg {
             background-color: #0d1117; /* Deep charcoal/black background */
             font-family: 'Inter', monospace;
-            /* Applying a subtle CRT/glow effect */
-            box-shadow: inset 0 0 100px rgba(0, 255, 0, 0.05);
+            /* Applying a subtle CRT/glow effect, now gold */
+            box-shadow: inset 0 0 100px rgba(255, 215, 0, 0.05);
         }
-        .neon-text {
-            color: #10b981; /* Emerald Green */
-            text-shadow: 0 0 5px rgba(16, 185, 129, 0.5), 0 0 10px rgba(16, 185, 129, 0.3);
+        .gold-text {
+            color: #FFD700; /* Classic Gold */
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3);
         }
         .cta-button {
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+            /* Gold Shadow */
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
         }
         .cta-button:hover {
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.8), 0 0 5px rgba(255, 255, 255, 0.2);
+            /* Brighter Gold Shadow on hover */
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), 0 0 5px rgba(255, 255, 255, 0.2);
             transform: scale(1.05);
         }
         /* --- Terminal Animation CSS --- */
@@ -40,7 +42,7 @@
         .code-line {
             white-space: nowrap;
             font-size: 10px;
-            color: #0f3f2a; /* Darker green for background */
+            color: #664900; /* Darker, muted gold for background effect */
             line-height: 1.2;
             animation: scroll-up linear infinite;
         }
@@ -54,7 +56,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'neon': '#10b981', // Emerald Green
+                        'btc-gold': '#FFD700', // Classic Gold for primary accents
                         'dark-slate': '#1e293b',
                     }
                 }
@@ -72,94 +74,118 @@
 
         <!-- Header / Logo Area -->
         <header class="text-center mb-16 pt-8">
-            <p class="text-xs uppercase tracking-widest text-neon">>>> INITIALIZING // PROTOCOL 77-B</p>
+            <p class="text-xs uppercase tracking-widest text-btc-gold">>>> INITIALIZING // PROTOCOL 77-B</p>
             <h1 class="text-5xl sm:text-7xl font-extrabold mt-2 text-white">
-                <span class="neon-text">BITCOIN</span> KEY HUNT
+                <span class="gold-text">BITCOIN</span> KEY HUNT
             </h1>
-            <p class="text-lg text-gray-400 mt-2">The ultimate cryptographic challenge. Locate the lost keys.</p>
+            <p class="text-lg text-gray-400 mt-2">The ultimate cryptographic challenge. Explore the brute-force possibilities.</p>
         </header>
 
         <!-- Hero Section and Call to Action -->
-        <main class="max-w-4xl mx-auto bg-dark-slate/50 backdrop-blur-sm rounded-xl p-6 sm:p-10 border border-neon/30 shadow-2xl shadow-neon/10">
+        <main class="max-w-4xl mx-auto bg-dark-slate/50 backdrop-blur-sm rounded-xl p-6 sm:p-10 border border-btc-gold/30 shadow-2xl shadow-btc-gold/10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <!-- Text and CTA -->
-                <div class="text-center lg:text-left">
+                
+                <!-- Device Mockup (Order 1 on mobile, Order 2 on desktop) -->
+                <div class="flex justify-center items-center lg:order-2 order-1 lg:py-0 py-4">
+                    <!-- Thumbnail Image with Relative URL -->
+                    <img
+                        src="./assets/bitcoinkeyhunt_thumbnail.jpg"
+                        alt="Mobile app screenshot showing the Bitcoin Key Hunt game interface"
+                        class="w-64 sm:w-80 h-auto rounded-xl shadow-2xl border-2 border-btc-gold/50 transition-all duration-300 hover:scale-[1.02]"
+                        onerror="this.onerror=null; this.src='https://placehold.co/320x640/FFD700/0d1117?text=THUMBNAIL+MISSING'; this.style.filter='grayscale(100%)';"
+                    >
+                </div>
+
+
+                <!-- Text and CTA (Order 2 on mobile, Order 1 on desktop) -->
+                <div class="text-center lg:text-left lg:order-1 order-2">
                     <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">
-                        DECODE. SEARCH. ACQUIRE.
+                        DECODE. SEARCH. PROVE.
                     </h2>
                     <p class="text-gray-400 mb-6 leading-relaxed">
-                        The Bitcoin blockchain holds secrets. This application turns your mobile device into a powerful decryption tool, challenging you to locate private keys associated with live, real-world Bitcoin addresses. Engage in a deep dive into cryptography, probability, and brute-force testing—all from the palm of your hand.
+                        No Server, No Ads, No Subscriptions, No tracking. **Pay once, use forever.** Dive into the legendary **"32 BTC puzzles"** with a fun, grid-based tool all local. Discover on-chain status, analyze solutions, and explore patterns with a streamlined, professional workflow. Whether you're curious about the classic 32 BTC puzzle set or just want a fast way to check on-chain status, this app gives you clear tools, clean visuals, and efficient controls.
                     </p>
-                    <p class="text-lg font-mono mb-8 neon-text bg-dark-slate/50 p-3 rounded-lg inline-block">
+                    <p class="text-lg font-mono mb-8 gold-text bg-dark-slate/50 p-3 rounded-lg inline-block">
                         >$ STATUS: ACTIVE_SEARCH_MODE
                     </p>
                     
                     <!-- CTA Button -->
                     <a href="https://play.google.com/store/apps/details?id=com.saidev.bitcoinkeyhunt" 
-                       class="cta-button inline-block w-full sm:w-auto px-10 py-4 text-xl font-bold bg-neon text-gray-900 rounded-lg hover:bg-lime-300 transition-colors uppercase tracking-widest"
+                       class="cta-button inline-block w-full sm:w-auto px-10 py-4 text-xl font-bold bg-btc-gold text-gray-900 rounded-lg hover:bg-yellow-300 transition-colors uppercase tracking-widest"
                        target="_blank" rel="noopener noreferrer">
                         [DOWNLOAD THE APP]
                     </a>
-                    <p class="mt-4 text-sm text-gray-500">Android required. No purchase necessary to begin the hunt.</p>
-                </div>
-
-                <!-- Simulated Terminal Output -->
-                <div class="hidden lg:block bg-gray-900 border border-neon/50 rounded-lg p-4 font-mono text-sm h-full">
-                    <pre class="overflow-y-auto h-full">
-<span class="neon-text">Connecting to Bitcoin P2P Network...</span>
-<span class="text-gray-500">
-[2025-10-17 06:15:33] &gt; System check: OK
-[2025-10-17 06:15:34] &gt; Entropy pool: Generating... Done.
-[2025-10-17 06:15:35] &gt; Target Range: 00000000...FFFFFFFF
-[2025-10-17 06:15:36] &gt; Algorithm: SECP256K1/SHA256
-[2025-10-17 06:15:37] &gt; Public Key: 1BoatSLRmo...XQYnE8B (Active)
-[2025-10-17 06:15:38] &gt; Searching at: 1,000,000 Keys/s...
-[2025-10-17 06:15:39] &gt; Key Count: 1.000.000,000 attempted.
-[2025-10-17 06:15:40] &gt; Key Count: 2.000.000,000 attempted.
-[2025-10-17 06:15:41] &gt; Key Count: 3.000.000,000 attempted.
-[2025-10-17 06:15:42] &gt; Key Count: 4.000.000,000 attempted.
-[2025-10-17 06:15:43] &gt; Key Count: 5.000.000,000 attempted.
-[2025-10-17 06:15:44] &gt; Key Count: 6.000.000,000 attempted.
-[2025-10-17 06:15:45] &gt; Key Count: 7.000.000,000 attempted.
-[2025-10-17 06:15:46] &gt; Key Count: 8.000.000,000 attempted.
-[2025-10-17 06:15:47] &gt; Key Count: 9.000.000,000 attempted.
-<span class="text-red-500">
-[2025-10-17 06:15:48] &gt; WARNING: High CPU utilization. Cooling systems nominal.</span>
-[2025-10-17 06:15:49] &gt; Key Count: 11.000.000,000 attempted.
-</span></pre>
+                    <p class="mt-4 text-sm text-gray-500">Android required. App purchase required for full feature, limited trial available.</p>
                 </div>
             </div>
         </main>
 
         <!-- Feature Section -->
-        <section class="max-w-5xl mx-auto mt-16 text-center">
-            <h3 class="text-2xl font-semibold mb-8 border-b border-neon/50 pb-2 inline-block neon-text">
-                [PROTOCOL_FEATURES]
+        <section class="max-w-6xl mx-auto mt-16 text-center">
+            <h3 class="text-2xl font-semibold mb-10 border-b border-btc-gold/50 pb-2 inline-block gold-text">
+                [ADVANCED_SYSTEM_FEATURES]
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-                <!-- Feature 1 -->
-                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-neon transition-all duration-300">
-                    <span class="text-4xl neon-text mb-3 inline-block">⚡</span>
-                    <h4 class="text-xl font-bold mb-2 text-white">BRUTE FORCE SIMULATION</h4>
-                    <p class="text-gray-400 text-sm">Experience the thrill of cryptographic exploration by simulating brute-force attacks on vulnerable Bitcoin key ranges.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                
+                <!-- Feature 1: Grid-Based Key Editor -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-btc-gold transition-all duration-300">
+                    <span class="text-4xl gold-text mb-3 inline-block">🎛️</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">GRID-BASED KEY EDITOR</h4>
+                    <p class="text-gray-400 text-sm">Analyze the 32 BTC puzzles using an intuitive bit grid. Toggle cells, view patterns, and convert the resulting key to a Bitcoin address with a single tap.</p>
                 </div>
-                <!-- Feature 2 -->
-                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-neon transition-all duration-300">
-                    <span class="text-4xl neon-text mb-3 inline-block">🧩</span>
-                    <h4 class="text-xl font-bold mb-2 text-white">CRYPTO PUZZLES</h4>
-                    <p class="text-gray-400 text-sm">Solve complex, randomized puzzles based on real-world wallet formats and cryptographic standards (SECP256K1).</p>
+
+                <!-- Feature 2: Live Chain Status -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-btc-gold transition-all duration-300">
+                    <span class="text-4xl gold-text mb-3 inline-block">🔗</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">LIVE CHAIN STATUS CHECKS</h4>
+                    <p class="text-gray-400 text-sm">Verify puzzle address status (prize value, current balance, solved indicators) via supported explorers. See the last checked time and update on demand.</p>
                 </div>
-                <!-- Feature 3 -->
-                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-neon transition-all duration-300">
-                    <span class="text-4xl neon-text mb-3 inline-block">💰</span>
-                    <h4 class="text-xl font-bold mb-2 text-white">REAL ADDRESSES</h4>
-                    <p class="text-gray-400 text-sm">All targets are generated from known, publicly available Bitcoin addresses. The potential for a find is real, but the probability remains the ultimate challenge.</p>
+                
+                <!-- Feature 3: Advanced Scan Modes -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-btc-gold transition-all duration-300">
+                    <span class="text-4xl gold-text mb-3 inline-block">🏃</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">ADVANCED SCAN MODES</h4>
+                    <p class="text-gray-400 text-sm">Configure **Step Search** to solve a puzzle as you walk, utilize the **Range Slider** to narrow your search, and choose between **Sequential** or **Random** key generation runs.</p>
                 </div>
+                
+                <!-- Feature 4: Pattern Insights -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-btc-gold transition-all duration-300">
+                    <span class="text-4xl gold-text mb-3 inline-block">📈</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">PATTERN INSIGHTS & PROBABILITY</h4>
+                    <p class="text-gray-400 text-sm">View replay and distribution patterns (where available) to understand bit tendencies. Explore probabilities and combinations at a glance for deeper analysis.</p>
+                </div>
+                
+                <!-- Feature 5: Themed & Optimized UI -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-btc-gold transition-all duration-300">
+                    <span class="text-4xl gold-text mb-3 inline-block">🌓</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">THEMED & OPTIMIZED UI</h4>
+                    <p class="text-gray-400 text-sm">Features clean, themeable Light and Dark modes. Smart, compact controls are optimized for both portrait and landscape orientations on all mobile devices.</p>
+                </div>
+                
+                <!-- Feature 6: Deep Dive Logging -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-btc-gold transition-all duration-300">
+                    <span class="text-4xl gold-text mb-3 inline-block">📑</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">DEEP DIVE LOGGING</h4>
+                    <p class="text-gray-400 text-sm">The **Log Action** tab shows the specific puzzles, keys generated, and successful matches, giving advanced users detailed data to analyze their exploration strategy.</p>
+                </div>
+
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="text-center mt-20 text-xs text-gray-600 border-t border-gray-800 pt-6">
+            <!-- Disclaimer -->
+            <p class="text-red-400 mb-2">
+                DISCLAIMER: This app is a research and utility tool for the historical Bitcoin puzzles. 
+                It does not guarantee any on-chain outcomes or rewards.
+            </p>
+            <p class="text-red-400 mb-2">
+                Always handle cryptographic material responsibly.
+            </p>
+            <p class="text-gray-500 mb-4">
+                Network usage may be required for status checks.
+            </p>
+            <!-- Copyright -->
             <p>&copy; 2025 BITCOIN KEY HUNT. All rights reserved. Encryption is not a toy. Play responsibly.</p>
         </footer>
 
