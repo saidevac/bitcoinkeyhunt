@@ -4,3 +4,6 @@ plugins:
 
 title: Bitcoin KeyHunt
 description: A visual hunt for 32 BTC puzzle keys
+
+show_downloads: true
+google_analytics: [Your Google Analytics tracking ID]
