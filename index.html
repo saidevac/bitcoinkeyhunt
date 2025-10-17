@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITCOIN KEY HUNT // Accessing Network</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for the hacker theme */
+        .hacker-bg {
+            background-color: #0d1117; /* Deep charcoal/black background */
+            font-family: 'Inter', monospace;
+            /* Applying a subtle CRT/glow effect */
+            box-shadow: inset 0 0 100px rgba(0, 255, 0, 0.05);
+        }
+        .neon-text {
+            color: #10b981; /* Emerald Green */
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.5), 0 0 10px rgba(16, 185, 129, 0.3);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+        }
+        .cta-button:hover {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.8), 0 0 5px rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        /* --- Terminal Animation CSS --- */
+        #terminal-code {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            opacity: 0.05; /* Very subtle background effect */
+        }
+        .code-line {
+            white-space: nowrap;
+            font-size: 10px;
+            color: #0f3f2a; /* Darker green for background */
+            line-height: 1.2;
+            animation: scroll-up linear infinite;
+        }
+        @keyframes scroll-up {
+            from { transform: translateY(100%); }
+            to { transform: translateY(-100%); }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon': '#10b981', // Emerald Green
+                        'dark-slate': '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="hacker-bg text-gray-300 min-h-screen">
+
+    <!-- Terminal Background Animation Layer -->
+    <div id="terminal-code"></div>
+
+    <!-- Main Content Layer (z-index 10 to float above the code) -->
+    <div class="relative z-10 p-4 sm:p-8">
+
+        <!-- Header / Logo Area -->
+        <header class="text-center mb-16 pt-8">
+            <p class="text-xs uppercase tracking-widest text-neon">>>> INITIALIZING // PROTOCOL 77-B</p>
+            <h1 class="text-5xl sm:text-7xl font-extrabold mt-2 text-white">
+                <span class="neon-text">BITCOIN</span> KEY HUNT
+            </h1>
+            <p class="text-lg text-gray-400 mt-2">The ultimate cryptographic challenge. Locate the lost keys.</p>
+        </header>
+
+        <!-- Hero Section and Call to Action -->
+        <main class="max-w-4xl mx-auto bg-dark-slate/50 backdrop-blur-sm rounded-xl p-6 sm:p-10 border border-neon/30 shadow-2xl shadow-neon/10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Text and CTA -->
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">
+                        DECODE. SEARCH. ACQUIRE.
+                    </h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        The Bitcoin blockchain holds secrets. This application turns your mobile device into a powerful decryption tool, challenging you to locate private keys associated with live, real-world Bitcoin addresses. Engage in a deep dive into cryptography, probability, and brute-force testing—all from the palm of your hand.
+                    </p>
+                    <p class="text-lg font-mono mb-8 neon-text bg-dark-slate/50 p-3 rounded-lg inline-block">
+                        >$ STATUS: ACTIVE_SEARCH_MODE
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <a href="https://play.google.com/store/apps/details?id=com.saidev.bitcoinkeyhunt" 
+                       class="cta-button inline-block w-full sm:w-auto px-10 py-4 text-xl font-bold bg-neon text-gray-900 rounded-lg hover:bg-lime-300 transition-colors uppercase tracking-widest"
+                       target="_blank" rel="noopener noreferrer">
+                        [DOWNLOAD THE APP]
+                    </a>
+                    <p class="mt-4 text-sm text-gray-500">Android required. No purchase necessary to begin the hunt.</p>
+                </div>
+
+                <!-- Simulated Terminal Output -->
+                <div class="hidden lg:block bg-gray-900 border border-neon/50 rounded-lg p-4 font-mono text-sm h-full">
+                    <pre class="overflow-y-auto h-full">
+<span class="neon-text">Connecting to Bitcoin P2P Network...</span>
+<span class="text-gray-500">
+[2025-10-17 06:15:33] &gt; System check: OK
+[2025-10-17 06:15:34] &gt; Entropy pool: Generating... Done.
+[2025-10-17 06:15:35] &gt; Target Range: 00000000...FFFFFFFF
+[2025-10-17 06:15:36] &gt; Algorithm: SECP256K1/SHA256
+[2025-10-17 06:15:37] &gt; Public Key: 1BoatSLRmo...XQYnE8B (Active)
+[2025-10-17 06:15:38] &gt; Searching at: 1,000,000 Keys/s...
+[2025-10-17 06:15:39] &gt; Key Count: 1.000.000,000 attempted.
+[2025-10-17 06:15:40] &gt; Key Count: 2.000.000,000 attempted.
+[2025-10-17 06:15:41] &gt; Key Count: 3.000.000,000 attempted.
+[2025-10-17 06:15:42] &gt; Key Count: 4.000.000,000 attempted.
+[2025-10-17 06:15:43] &gt; Key Count: 5.000.000,000 attempted.
+[2025-10-17 06:15:44] &gt; Key Count: 6.000.000,000 attempted.
+[2025-10-17 06:15:45] &gt; Key Count: 7.000.000,000 attempted.
+[2025-10-17 06:15:46] &gt; Key Count: 8.000.000,000 attempted.
+[2025-10-17 06:15:47] &gt; Key Count: 9.000.000,000 attempted.
+<span class="text-red-500">
+[2025-10-17 06:15:48] &gt; WARNING: High CPU utilization. Cooling systems nominal.</span>
+[2025-10-17 06:15:49] &gt; Key Count: 11.000.000,000 attempted.
+</span></pre>
+                </div>
+            </div>
+        </main>
+
+        <!-- Feature Section -->
+        <section class="max-w-5xl mx-auto mt-16 text-center">
+            <h3 class="text-2xl font-semibold mb-8 border-b border-neon/50 pb-2 inline-block neon-text">
+                [PROTOCOL_FEATURES]
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <!-- Feature 1 -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-neon transition-all duration-300">
+                    <span class="text-4xl neon-text mb-3 inline-block">⚡</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">BRUTE FORCE SIMULATION</h4>
+                    <p class="text-gray-400 text-sm">Experience the thrill of cryptographic exploration by simulating brute-force attacks on vulnerable Bitcoin key ranges.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-neon transition-all duration-300">
+                    <span class="text-4xl neon-text mb-3 inline-block">🧩</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">CRYPTO PUZZLES</h4>
+                    <p class="text-gray-400 text-sm">Solve complex, randomized puzzles based on real-world wallet formats and cryptographic standards (SECP256K1).</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-6 rounded-lg bg-dark-slate/50 border border-gray-700 hover:border-neon transition-all duration-300">
+                    <span class="text-4xl neon-text mb-3 inline-block">💰</span>
+                    <h4 class="text-xl font-bold mb-2 text-white">REAL ADDRESSES</h4>
+                    <p class="text-gray-400 text-sm">All targets are generated from known, publicly available Bitcoin addresses. The potential for a find is real, but the probability remains the ultimate challenge.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-20 text-xs text-gray-600 border-t border-gray-800 pt-6">
+            <p>&copy; 2025 BITCOIN KEY HUNT. All rights reserved. Encryption is not a toy. Play responsibly.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Background Animation -->
+    <script>
+        const terminalCode = document.getElementById('terminal-code');
+        const chars = '0123456789ABCDEF!@#$%^&*()_+=-?/>,<~`|{}[]\\';
+        const numLines = 50;
+        const lineLength = 100;
+        const animationDuration = 60; // seconds
+
+        // Function to generate a random line of code
+        function generateRandomLine() {
+            let line = '';
+            for (let i = 0; i < lineLength; i++) {
+                line += chars[Math.floor(Math.random() * chars.length)];
+            }
+            return `<div class="code-line" style="animation-duration: ${animationDuration}s; animation-delay: -${Math.random() * animationDuration}s;">${line}</div>`;
+        }
+
+        // Populate the background with lines
+        function initializeBackground() {
+            let content = '';
+            for (let i = 0; i < numLines; i++) {
+                content += generateRandomLine();
+            }
+            terminalCode.innerHTML = content;
+        }
+
+        window.onload = initializeBackground;
+    </script>
+
+</body>
+</html>
